@@ -215,7 +215,6 @@ INSTALLED_APPS = [
     'django_countries',
     'django_filters',
     'django_celery_results',
-    'embed_video',
     'impersonate',
     'phonenumber_field']
 
