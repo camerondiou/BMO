@@ -6,12 +6,13 @@
 {% load placeholder %}
 {% load translate_url from urls %}
 
+
 <html lang="{{ LANGUAGE_CODE }}" class="no-js" data-shipping-options-url="{% url 'cart:shipping-options' %}" data-cart-summary-url="{% url 'cart:summary' %}">
 <head>
   <title>{% block title %}{{ site.name }}{% endblock %}</title>
   {% block meta %}
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Saleor">
     <meta name="theme-color" content="#333333">
     <meta name="msapplication-TileColor" content="#2b5797">
@@ -46,6 +47,11 @@
 
 <body>
 {% block header %}
+
+
+
+
+
   <header class="navbar" role="navigation">
     <div class="navbar__login container-fluid {% if user.is_impersonate %} bg-warning{% endif %}">
       <div class=" d-none d-md-block container">
@@ -105,7 +111,7 @@
               <span>{% trans "menu" context "Hamburger button text" %}</span>
             </div>
             <a href="{% url 'home' %}">
-              <svg data-src="{% static "images/logo.svg" %}" height="38px" width="176px"/>
+              <img src="{% static "images/logo.png" %}" height="176px" width="250px"/>
             </a>
           </div>
           <div class="col-2 col-md-4 navbar__search static">
@@ -180,7 +186,7 @@
       <div class="row">
         <div class="col-md-3">
           <a href="{% url 'home' %}" class="footer__logo">
-            <svg data-src="{% static "images/logo.svg" %}" height="38px" width="176px"/>
+            <svg data-src="{% static "images/logo.png" %}" height="38px" width="176px"/>
           </a>
         </div>
         <div class="col-md-3 col-sm-6">
