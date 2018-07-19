@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>BMO Australia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://i.imgur.com/Rq77rBL.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+#myVideo {
+
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#video{display:none}
+
+/* Default to display the image on all devices */
+#videosubstitute{display:block;width:auto;height:100%;}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#fullScreenDiv{
+    width:100%;
+    min-height: 100%;
+   /* Set the height to match that of the viewport. */
+    height: 100vh;
+    width: auto;
+    padding:0!important;
+    margin: 0!important;
+    background-color: gray;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    width: 150%;
+    left: -100%;
+  }
+  #videosubstitute{display:block;width:auto;height:100%;}
+}
+/*if there is 992  pixels or more, then display the video but hide the image*/
+@media only screen and (min-width : 992px) {
+#video{display:block;}
+#videosubstitute{display:none}
+}
+
+/* The container for our text and stuff */
+#messageBox{
+    color: white;
+    position: absolute;  top: 0;  left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+
+
+</style>
+
+
+<!-- About Section -->
+
+<div id="fullScreenDiv">
+       <img src="http://globalmedicalco.com/photos/globalmedicalco/25/121125.jpg" id="videosubstitute" alt="Full screen background video">
+       <div id="videoDiv">
+           <video preload="preload" id="video" autoplay="autoplay" loop="loop">
+           <source src="{{MEDIA_URL}}sunset.mp4" type="video/mp4"></source>
+           </video>
+       </div>
+       <div id="messageBox">
+           <div>
+             <div class="w3-container" style="padding:128px 16px" id="about">
+              <h3 class="w3-center">ABOUT OUR BOOTS</h3>
+               <p class="w3-center w3-large">BMO Australia is a Premium Australian Fashion Brand born from rich family Heritage,
+embodied by dedicated craftsmanship and perfectly harmonised with pure Australian values.
+Experience the delicate softness of pure Australian Merino Wool whilst enjoying the sensation
+®
+of elegance and comfort this winter as you slip into a pair of super cosy BMO Australia Boots.</p>
+               <div class="w3-row-padding w3-center" style="margin-top:64px">
+
+                 <div class="w3-quarter">
+                   <i class="fa fa-bicycle w3-margin-bottom w3-jumbo"></i>
+                   <p class="w3-large">Australian Made</p>
+                   <p>It’s partly about purchasing genuine quality from a genuine source; it’s partly about using 100%
+Natural Australian materials (because their simply the best) and it’s partly about the love, care and
+attention that only comes from handcrafting a pair of boots through 80 years of proven techniques.</p>
+                 </div>
+                 <div class="w3-quarter">
+                   <i class="fa fa-shopping-bag w3-margin-bottom w3-jumbo"></i>
+                   <p class="w3-large">Passion</p>
+                   <p>With a New Generation of BMO Australia and an overwhelming demand for Genuine, Sustainable,
+Eco-Friendly products in the High-End European Fashion Markets, BMO Australia launched an
+Exclusive Collection, adapted to suit the Harsh European conditions in 2012. </p>
+                 </div>
+                 <div class="w3-quarter">
+                   <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+                   <p class="w3-large">Carefully Handcrafted</p>
+                   <p>Equally important to each and every one of our Master Craftsmen, and Ladies, is the passion,
+attention to detail and quality that is only created by Handcrafting a boot with care. Inspecting every
+skin with their delicate touch, generations of craftsmen use processes that are tried and true.</p>
+                 </div>
+                 <div class="w3-quarter">
+                   <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+                   <p class="w3-large">History</p>
+                   <p>Proudly recognised as the first manufacturer of the iconic Australian style UGG boot since 1933, and
+kept alive by one nation’s loyalty to an iconic Australian product, BMO Australia truly is the only
+Global manufacturer and distributor of genuine, Australian, Handmade, 100% Natural, Sheepskin
+boots on the European market.</p>
+                 </div>
+               </div>
+             </div>
+
+           </div>
+       </div>
