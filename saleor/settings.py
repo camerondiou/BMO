@@ -299,13 +299,15 @@ PAYMENT_HOST = get_host
 PAYMENT_MODEL = 'order.Payment'
 
 PAYMENT_VARIANTS = {
-    'default': ('payments.dummy.DummyProvider', {})}
+    'stripe': ('payments.stripe.widgets.StripeCheckoutWidget', {
+        'secret_key': 'sk_test_9nMSoclVljwESbMWh9AOHMwT',
+        'public_key': 'pk_test_vmCCDPQ2RXQUqof6TliWLL8y'})}
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 CHECKOUT_PAYMENT_CHOICES = [
-    ('default', 'Dummy provider')]
+    ('default', 'Stripe')]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'}
